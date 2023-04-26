@@ -31,7 +31,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Copy build outputs to staging directory
-        run: mkdir staging && cp target/*.jar staging
+        run: mkdir staging && cp */target/*.{jar,war} staging
 
       - name: List staging directory contents
         run: ls -la staging
